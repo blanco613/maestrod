@@ -41,9 +41,18 @@ type pull_request struct {
 
 	type user struct {				//is this how this should be nested?					
 		Login	string	`json:"login"`
-		ID	uint	`json:"login"`
+		ID	uint	`json:"id"`
 		Type	string	`json:"user"`
 		Site_Admin bool	`json:"site_admin"`		 
+			 }
+	type body struct {
+		Created_At   string	`json:"created_at"`
+		Updated_At   string	`json:"updated_at"`
+		Closed_At    string	`json:"closed_at"`
+		Merged_At    string	`json:"merged_at"`
+		Merge_Commit_Sha string `json:"merge_commit_sha"`
+		Assignee     string	`json:"assignee"`
+		Milestone    string	`json:"milestone"`
 			 }
 
 }
@@ -57,15 +66,6 @@ type pull_request struct {
     "title": "Update the README with new information",
     
 
-   
- "body": "This is a pretty simple change that we need to pull into master.",
-    "created_at": "2015-05-05T23:40:27Z",
-    "updated_at": "2015-05-05T23:40:27Z",
-    "closed_at": null,
-    "merged_at": null,
-    "merge_commit_sha": null,
-    "assignee": null,
-    "milestone": null,
    
    "head": {
       "label": "baxterthehacker:changes",
